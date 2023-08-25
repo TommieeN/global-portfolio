@@ -1,5 +1,6 @@
 import LandingPage from "../../components/LandingPage/LandingPage";
 import NavBar from "../../components/NavBar/NavBar";
+import Projects from "../../components/Projects/Projects";
 import TechStack from "../../components/TechStack/TechStack";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
         <NavBar />
         <LandingPage />
         <TechStack />
+        <Projects />
     </div>
     )
 };
