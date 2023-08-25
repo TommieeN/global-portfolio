@@ -9,6 +9,25 @@
         gap: 0.5rem;
     }
     &__logo-text {
-        
+        font-weight: 500;
+    }
+    &__links {
+        position: fixed;
+        right: 0;
+        text-align: right;
+        padding-right: 1rem;
+        font-size: 1rem;
+        font-weight: 700;
+        width: 30%;
+        background: rgba($color: #0000, $alpha: 0.8);
+    }
+    &__link {
+        padding: 1rem;
+        &:hover {
+            font-size: 1.5rem;
+            color: #08c9ff;
+            transition: 500ms;
+            border-bottom: 2px solid #08c9ff;
+        }
     }
 }
