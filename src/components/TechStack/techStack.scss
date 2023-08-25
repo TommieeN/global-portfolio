@@ -1,0 +1,17 @@
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    &__list-item {
+        text-align: center;
+        flex-shrink: 0;
+    }
+    &__icons {
+        max-width: 100%;
+        height: -webkit-fill-available;
+        width: 5rem;
+    }
+}
