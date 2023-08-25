@@ -14,7 +14,9 @@
     &__links {
         position: fixed;
         right: 0;
-        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding-right: 1rem;
         font-size: 1rem;
         font-weight: 700;
@@ -24,10 +26,9 @@
     &__link {
         padding: 1rem;
         &:hover {
-            font-size: 1.5rem;
-            color: #08c9ff;
+            font-size: 1.2rem;
+            color: blue;
             transition: 500ms;
-            border-bottom: 2px solid #08c9ff;
         }
     }
 }
