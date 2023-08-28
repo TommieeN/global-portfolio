@@ -1,19 +1,16 @@
 .project {
     font-weight: 500;
     &__image {
-        width: 100%;
+        border-radius: 100%;
+        width: 15rem;
+        height: 15rem;
+        object-fit: cover;
     }
     &__item-container {
-        background: black;
-        border: 3px solid white;
-        margin: 1rem;
-        border-radius: 15% 0 25% 0;
+
     }
     &__title-container {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        margin: 1rem;
+
     }
     &__links {
         color: black;
@@ -23,7 +20,7 @@
         max-width: 3rem;
     }
     &__description-container {
-        margin: 1rem;
+
     }
 }
 
