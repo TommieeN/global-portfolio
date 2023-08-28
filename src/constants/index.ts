@@ -5,6 +5,7 @@ import brainflix from "../assets/projects/brainflix.jpg"
 import flags from "../assets/projects/flags.jpg"
 import inStock from "../assets/projects/instock.jpg"
 import rockPaperScissors from "../assets/projects/rockPaperScissors.jpg"
+import todoApp from "../assets/projects/todo-crud-app.png"
 
 // Tech Stack Icons
 import git from "../assets/techIcons/git.svg"
@@ -15,6 +16,8 @@ import react from "../assets/techIcons/react.svg"
 import tailwind from "../assets/techIcons/tailwind.svg"
 import sass from "../assets/techIcons/sass.svg"
 import typescript from "../assets/techIcons/typescript.svg"
+import mongoDb from "../assets/techIcons/mongodb.svg"
+import jest from "../assets/techIcons/jest.svg"
 
 const techIcons = [
   {
@@ -30,7 +33,7 @@ const techIcons = [
     img: javascript
   },
   {
-    title: "TailwindCSS",
+    title: "Tailwind",
     img: tailwind
   },
   {
@@ -49,6 +52,14 @@ const techIcons = [
     title: "Git",
     img: git
   },
+  {
+    title: "MongoDB",
+    img: mongoDb
+  },
+  {
+    title: "Jest",
+    img: jest
+  },
 ]
 
 const projects = [
@@ -59,14 +70,16 @@ const projects = [
       img: journey,
       link: "https://github.com/TommieeN/Journey-React-Platformer-Game",
       deploy: "https://647fe614ec115515d29a0e71--golden-nasturtium-3edb6f.netlify.app/",
+      techStack: ["Canvas", "React", "SASS", "Object Oriented Programming"]
     },
     {
       id: 2,
       title: "Bandsite",
       description: "Fully responsive website for a fictional band that include show dates.",
       img: bandsite,
-      link: "https://github.com/TommieeN/band-site",
+      link: "https://github.com/TommieeN/band-site-react-client",
       deploy: "https://my-band-site.netlify.app/",
+      techStack: ["React", "TailWind", "Vite", "Node.js", "Express.js", "React-Router-Dom"]
     },
     {
       id: 3,
@@ -75,6 +88,7 @@ const projects = [
       img: brainflix,
       link: "https://github.com/TommieeN/Brainflix",
       deploy: "https://brainflix.onrender.com/",
+      techStack: ["React", "React-Router-Dom", "SASS", "BEM", "Node.js", "Express.js", "Rest API"]
     },
     {
       id: 5,
@@ -82,6 +96,7 @@ const projects = [
       description: "A collaborative project utilizing agile methodologies to create a full stack application.",
       img: inStock,
       link: "https://github.com/TommieeN/instock-client",
+      techStack: ["React", "React-Router-Dom", "SASS", "BEM", "Node.js", "Express.js", "mySQL", "Knex"]
     },
     {
       id: 4,
@@ -89,7 +104,8 @@ const projects = [
       description: "A list of flags from around the world.",
       img: flags,
       link: "https://github.com/TommieeN/country-flags-api",
-      deploy: "https://client-flags.onrender.com/"
+      deploy: "https://client-flags.onrender.com/",
+      techStack: ["React", "SASS", "Node.js", "Express.js", "Axios", "React-Router-Dom", "BEM"]
     },
     {
       id: 5,
@@ -97,8 +113,18 @@ const projects = [
       description: "Play a game of rock paper scissors",
       img: rockPaperScissors,
       link: "https://github.com/TommieeN/rock-paper-scissors/tree/main",
-      deploy: "https://rock-paper-scissors-tommy.netlify.app/"
+      deploy: "https://rock-paper-scissors-tommy.netlify.app/",
+      techStack: ["Typescript", "React", "Tailwind", "FramerMotion"]
     },
+    {
+      id: 6,
+      title: "Todo Crud App",
+      description: "A todo app built with Svelte using firebase for auth and storing user data",
+      img: todoApp,
+      link: "https://github.com/TommieeN/svelte-todo-crud-app/tree/main/src/routes",
+      deploy: "",
+      techStack: ["Svelte", "CSS", "FireBase", "Authorization/Authentication"]
+    }
   ];
 
   export { projects, techIcons }

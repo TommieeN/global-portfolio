@@ -6,7 +6,6 @@ const TechStack = () => {
     <>
       <div className="tech-header">
         <h2 className="tech-header__heading">Tech Stack</h2>
-        <p className="tech-header__text">Technologies I'm most competent in.</p>
       </div>
       <ul className="tech-stack">
         {techIcons.map((icon) => {

@@ -1,25 +1,46 @@
 import "./projects.scss";
 import { projects } from "../../constants";
+import gitLogo from "../../assets/github-alt.svg";
 
 const Projects = () => {
   return (
-    <div>
+    <section className="project">
       <ul>
         {projects.map((project) => {
           return (
-            <li>
+            <li className="project__item-container">
               <div>
-                <p>{project.title}</p>
-                <img className="project__image" src={project.img} alt={project.title} />
-                <p>{project.description}</p>
-                <a>{project.link}</a>
-                <a>{project.deploy}</a>
+                <div className="project__title-container">
+                  <p>{project.title}</p>
+                  <a
+                    target="_blank"
+                    className="project__links"
+                    href={project.link}
+                  >
+                    <img
+                      className="project__github-logo"
+                      src={gitLogo}
+                      alt="cat-github-logo"
+                    />
+                  </a>
+                </div>
+                <img
+                  className="project__image"
+                  src={project.img}
+                  alt={`${project.title}-project-image`}
+                />
+                <div className="project__description-container">
+                  <p>{project.description}</p>
+                  <a target="_blank" href={project.deploy}>
+                    Deploy
+                  </a>
+                </div>
               </div>
             </li>
           );
         })}
       </ul>
-    </div>
+    </section>
   );
 };
 
