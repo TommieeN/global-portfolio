@@ -1,8 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 
-import NavLogo from "../../assets/logo.png";
-
 import "./navBar.scss";
 
 import { useState } from "react";
@@ -14,8 +12,7 @@ const NavBar = () => {
   return (
     <nav className="nav-bar">
       <div className="nav-bar__container">
-        <img className="nav-bar__logo" src={NavLogo} alt="site-logo" />
-        <p className="nav-bar__logo-text">GLOBAL</p>
+        <p className="nav-bar__logo-text">TOMMY</p>
       </div>
       <div>
         <a

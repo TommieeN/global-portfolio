@@ -1,5 +1,5 @@
 .landing-page {
-  border-bottom: 3px solid #232323;
+  text-align: center;
   padding: 0 1rem;
   &__hero {
     width: 100%;
@@ -13,41 +13,22 @@
   }
   &__btn-container {
     margin: 2rem 0;
+    
   }
   &__btn {
     font-weight: 600;
     font-size: 1rem;
     padding: 0.5rem;
-    border: none;
     background: black;
     cursor: pointer;
-    color: black;
-    border: none;
-    position: relative;
-    transition: all 0.35s;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 4px 20px rgb(49, 113, 242);
+    
+    &:hover {
+      background: white;
+      color: black;
+    }
   }
-  &__btn span {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    z-index: 2;
-  }
-  &__btn:after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: blue;
-    transition: all 0.35s;
-  }
-  &__btn:hover {
-    color: black;
-  }
-  &__btn:hover::after {
-    width: 100%;
-  }
-}
+}   

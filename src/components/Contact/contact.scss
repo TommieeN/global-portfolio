@@ -1,0 +1,9 @@
+.contact-form {
+    padding: 1rem;
+    border: 2px solid white;
+    &__input-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+}

@@ -10,7 +10,7 @@ const TechStack = () => {
       <ul className="tech-stack">
         {techIcons.map((icon) => {
           return (
-            <li className="tech-stack__list-item">
+            <li key={icon.id} className="tech-stack__list-item">
               <img
                 className="tech-stack__icons"
                 src={icon.img}

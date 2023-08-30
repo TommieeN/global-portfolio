@@ -8,7 +8,7 @@ const Projects = () => {
       <ul>
         {projects.map((project) => {
           return (
-            <li className="project__item-container">
+            <li key={project.id} className="project__item-container">
               <div>
                 <div className="project__title-container">
                   <p>{project.title}</p>

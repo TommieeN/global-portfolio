@@ -21,42 +21,52 @@ import jest from "../assets/techIcons/jest.svg"
 
 const techIcons = [
   {
+    id: 1,
     title: "React",
     img: react
   },
   {
+    id: 2,
     title: "TypeScript",
     img: typescript
   },
   {
+    id: 3,
     title: "Javascript",
     img: javascript
   },
   {
+    id: 4,
     title: "Tailwind",
     img: tailwind
   },
   {
+    id: 5,
     title: "mySQL",
     img: mysql
   },
   {
+    id: 6,
     title: "Node",
     img: node
   },
   {
+    id: 7,
     title: "Sass",
     img: sass
   },
   {
+    id: 8,
     title: "Git",
     img: git
   },
   {
+    id: 9,
     title: "MongoDB",
     img: mongoDb
   },
   {
+    id: 10,
     title: "Jest",
     img: jest
   },
@@ -91,7 +101,7 @@ const projects = [
       techStack: ["React", "React-Router-Dom", "SASS", "BEM", "Node.js", "Express.js", "Rest API"]
     },
     {
-      id: 5,
+      id: 4,
       title: "In-Stock",
       description: "A collaborative project utilizing agile methodologies to create a full stack application.",
       img: inStock,
@@ -99,7 +109,7 @@ const projects = [
       techStack: ["React", "React-Router-Dom", "SASS", "BEM", "Node.js", "Express.js", "mySQL", "Knex"]
     },
     {
-      id: 4,
+      id: 5,
       title: "Flags",
       description: "A list of flags from around the world.",
       img: flags,
@@ -108,7 +118,7 @@ const projects = [
       techStack: ["React", "SASS", "Node.js", "Express.js", "Axios", "React-Router-Dom", "BEM"]
     },
     {
-      id: 5,
+      id: 6,
       title: "Rock Paper Scissors!",
       description: "Play a game of rock paper scissors",
       img: rockPaperScissors,
@@ -117,7 +127,7 @@ const projects = [
       techStack: ["Typescript", "React", "Tailwind", "FramerMotion"]
     },
     {
-      id: 6,
+      id: 7,
       title: "Todo Crud App",
       description: "A todo app built with Svelte using firebase for auth and storing user data",
       img: todoApp,
