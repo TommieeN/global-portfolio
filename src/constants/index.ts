@@ -85,7 +85,7 @@ const projects = [
     {
       id: 2,
       title: "Bandsite",
-      description: "Fully responsive website for a fictional band that include show dates.",
+      description: "Fully responsive website for a fictional band that you can purchase tickets for.",
       img: bandsite,
       link: "https://github.com/TommieeN/band-site-react-client",
       deploy: "https://my-band-site.netlify.app/",
@@ -132,7 +132,6 @@ const projects = [
       description: "A todo app built with Svelte using firebase for auth and storing user data",
       img: todoApp,
       link: "https://github.com/TommieeN/svelte-todo-crud-app/tree/main/src/routes",
-      deploy: "",
       techStack: ["Svelte", "CSS", "FireBase", "Authorization/Authentication"]
     }
   ];

@@ -8,9 +8,10 @@ const LandingPage = () => {
     <div className="landing-page">
       <div className="landing-page__container">
         <h1 className="landing-page__header">
-          Hello, I'm Tommy Nguyen. I solve problems and create captivating
-          applications.
+          Hello, I'm Tommy Nguyen.
         </h1>
+        <h1 className="landing-page__header">I solve problems and create captivating
+          applications.</h1>
         <p className="landing-page__text">
           I'm a Full Stack Web Developer based in Surrey, British Columbia, Canada,
           deriving immense satisfaction from solving intricate problems through
