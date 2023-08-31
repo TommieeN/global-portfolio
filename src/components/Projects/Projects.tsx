@@ -4,6 +4,7 @@ import { projects } from "../../constants";
 const Projects = () => {
   return (
     <section className="project">
+      <h2 className="project__header">Projects</h2>
       <ul>
         {projects.map((project) => {
           return (

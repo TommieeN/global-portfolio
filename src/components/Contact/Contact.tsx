@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import "./contact.scss"
+import "./contact.scss";
 
 const Contact = () => {
   const formRef = useRef();
@@ -111,11 +111,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-form">
-      <h2>Get In Touch!</h2>
-      <form ref={formRef} onSubmit={handleSubmit} className="">
-        <div className="contact-form__input-container">
+    <div className="form">
+      <h2 className="form__header">Get In Touch!</h2>
+      <form className="form__container" ref={formRef} onSubmit={handleSubmit}>
+        <div className="form__input-container">
           <input
+            className="form__input"
             type="text"
             name="name"
             value={form.name}
@@ -123,6 +124,7 @@ const Contact = () => {
             placeholder="Name"
           />
           <input
+            className="form__input"
             type="email"
             name="email"
             value={form.email}
@@ -131,28 +133,29 @@ const Contact = () => {
           />
         </div>
         <textarea
-          rows={40}
-          cols={35}
+          className="form__text-area"
+          rows={10}
+          cols={20}
           name="message"
           value={form.message}
           onChange={handleChange}
-          placeholder="Message"
+          placeholder="Send me an email! :)"
         />
-        <button onClick={errorToast} type="submit">
+        <button className="form__btn" onClick={errorToast} type="submit">
           Send
         </button>
         <ToastContainer
-                position="top-center"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="dark"
-              />
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       </form>
     </div>
   );
