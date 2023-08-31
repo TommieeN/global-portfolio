@@ -76,7 +76,7 @@ const projects = [
     {
       id: 1,
       title: "Journey",
-      description: "2D platformer game built with react using canvas",
+      description: "2D platformer game built with react using canvas.",
       img: journey,
       link: "https://github.com/TommieeN/Journey-React-Platformer-Game",
       deploy: "https://647fe614ec115515d29a0e71--golden-nasturtium-3edb6f.netlify.app/",
@@ -120,7 +120,7 @@ const projects = [
     {
       id: 6,
       title: "Rock Paper Scissors!",
-      description: "Play a game of rock paper scissors",
+      description: "Play a game of rock paper scissors.",
       img: rockPaperScissors,
       link: "https://github.com/TommieeN/rock-paper-scissors/tree/main",
       deploy: "https://rock-paper-scissors-tommy.netlify.app/",
@@ -129,7 +129,7 @@ const projects = [
     {
       id: 7,
       title: "Todo Crud App",
-      description: "A todo app built with Svelte using firebase for auth and storing user data",
+      description: "A todo app built with Svelte using firebase for auth and storing user data.",
       img: todoApp,
       link: "https://github.com/TommieeN/svelte-todo-crud-app/tree/main/src/routes",
       techStack: ["Svelte", "CSS", "FireBase", "Authorization/Authentication"]

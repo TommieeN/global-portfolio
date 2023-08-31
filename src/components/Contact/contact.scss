@@ -1,6 +1,7 @@
 .form {
     padding: 1rem;
     border: 2px solid white;
+    margin: 1rem 0;
     &__container {
         display: flex;
         flex-direction: column;
@@ -37,6 +38,7 @@
         width: 7rem;
         border: 2px solid black;
         padding: 0.75rem 1rem;
+        margin-top: 0.5rem;
         border-radius: 15px;
         background: black;
         color: white;
