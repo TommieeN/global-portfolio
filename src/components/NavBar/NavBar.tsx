@@ -12,7 +12,7 @@ const NavBar = () => {
   return (
     <nav className="nav-bar">
       <div className="nav-bar__container">
-        <p className="nav-bar__logo-text">TOMMY</p>
+        <h3 className="nav-bar__logo-text">Tommy.</h3>
       </div>
       <div>
         <a
@@ -22,12 +22,12 @@ const NavBar = () => {
           href="#"
         >
           {hamburgerMenuOpen ? (
-            <FontAwesomeIcon icon={faX} />
+            <FontAwesomeIcon icon={faX} size="xl" style={{color: "#000000",}}/>
           ) : (
             <FontAwesomeIcon
               icon={faBars}
-              size="lg"
-              style={{ color: "#ffffff" }}
+              size="xl"
+              style={{color: "#000000",}}
             />
           )}
         </a>
