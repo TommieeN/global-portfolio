@@ -12,7 +12,7 @@ const NavBar = () => {
   return (
     <nav className="nav-bar">
       <div className="nav-bar__container">
-        <h3 className="nav-bar__logo-text">Tommy.</h3>
+        <h3 className="nav-bar__logo-text">Tommy</h3>
       </div>
       <div>
         <a

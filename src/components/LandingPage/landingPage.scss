@@ -21,8 +21,12 @@
   }
   &__logo {
     color: gray;
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 0.3rem;
     &:hover {
-      color: black;
+      color: white;
+      background-color: black;
     }
   }
   &__container {

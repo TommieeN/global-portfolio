@@ -23,21 +23,21 @@ const LandingPage = () => {
           <FontAwesomeIcon
             className="landing-page__logo"
             icon={faGithub}
-            size="2xl"
+            size="xl"
           />
         </a>
         <a href="https://www.linkedin.com/in/tommy-nguyenn/" target="_blank">
           <FontAwesomeIcon
             className="landing-page__logo"
             icon={faLinkedin}
-            size="2xl"
+            size="xl"
           />
         </a>
         <a href="mailto:timsnguyen@hotmail.com">
           <FontAwesomeIcon
             className="landing-page__logo"
             icon={faEnvelope}
-            size="2xl"
+            size="xl"
           />
         </a>
       </div>

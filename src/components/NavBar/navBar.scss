@@ -13,25 +13,27 @@
         font-weight: 700;
     }
     &__links {
-        box-shadow: 2px 4px 20px rgb(49, 113, 242);
+        box-shadow: 2px 4px 15px #3171f2;
         position: fixed;
         right: 0;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin: 0.5rem;
+        margin: 0.5rem 0.8rem;
+        padding: 0.5rem;
         font-size: 1rem;
         font-weight: 700;
-        width: 30%;
+        width: max-content;
         border-radius: 10px;
         background: white;
     }
     &__link {
-        padding: 1rem;
+        border-radius: 8px;
+        padding: 0.8rem;
         color: black;
+        width: 100%;
         &:hover {
-            font-size: 1.2rem;
-            color: blue;
+            color: #3171f2;
+            background:rgb(248, 244, 244);
             transition: 500ms;
         }
     }

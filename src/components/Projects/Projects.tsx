@@ -31,7 +31,7 @@ const Projects = () => {
                 <a target="_blank" href={project.deploy}>
                   <button className="project__btn">Deployment</button>
                 </a>
-                <a target="_blank" href={project.deploy}>
+                <a target="_blank" href={project.link}>
                   <button className="project__btn">Code</button>
                 </a>
               </div>
