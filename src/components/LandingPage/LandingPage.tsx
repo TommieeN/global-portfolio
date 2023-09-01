@@ -2,6 +2,7 @@ import "./landingPage.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const LandingPage = () => {
   return (
@@ -42,7 +43,7 @@ const LandingPage = () => {
         </a>
       </div>
       <div className="landing-page__btn-container">
-        <button className="landing-page__btn">CONTACT ME</button>
+        <AnchorLink href="#contact" className="landing-page__btn">CONTACT ME</AnchorLink>
       </div>
     </div>
   );
