@@ -3,7 +3,7 @@ import "./about.scss";
 const About = () => {
   return (
     <>
-      <h2 className="about-header">About Me</h2>
+      <h2 className="about-header"  id="about">About Me</h2>
       <section className="about">
         <p className="about__text">
           As I Embark on a transition to the dynamic tech industry , I embrace

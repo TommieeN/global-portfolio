@@ -111,7 +111,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="form">
+    <div className="form"  id="contact">
       <h2 className="form__header">Get In Touch!</h2>
       <form className="form__container" ref={formRef} onSubmit={handleSubmit}>
         <div className="form__input-container">

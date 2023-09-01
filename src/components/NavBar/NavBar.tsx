@@ -4,42 +4,47 @@ import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import "./navBar.scss";
 
 import { useState } from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { navBarLinks } from "../../constants";
 
 const NavBar = () => {
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
-  const navBarLinks = ["Home", "Works", "About", "Contact"];
 
   return (
-    <nav className="nav-bar">
+    <nav className="nav-bar" id="home">
       <div className="nav-bar__container">
         <h3 className="nav-bar__logo-text">Tommy</h3>
       </div>
       <div>
-        <a
+        <button
+          className="nav-bar__hamburger"
           onClick={() => {
             setHamburgerMenuOpen(!hamburgerMenuOpen);
           }}
-          href="#"
         >
           {hamburgerMenuOpen ? (
-            <FontAwesomeIcon icon={faX} size="xl" style={{color: "#000000",}}/>
+            <FontAwesomeIcon
+              icon={faX}
+              size="xl"
+              style={{ color: "#000000" }}
+            />
           ) : (
             <FontAwesomeIcon
               icon={faBars}
               size="xl"
-              style={{color: "#000000",}}
+              style={{ color: "#000000" }}
             />
           )}
-        </a>
+        </button>
         {hamburgerMenuOpen && (
           <ul className="nav-bar__links">
             {navBarLinks.map((navText) => {
               return (
-                <a href="#">
-                  <li key={navText} className="nav-bar__link">
-                    {navText}
+                <AnchorLink key={navText.title} href={navText.anchorTag}>
+                  <li className="nav-bar__link">
+                    {navText.title}
                   </li>
-                </a>
+                </AnchorLink>
               );
             })}
           </ul>

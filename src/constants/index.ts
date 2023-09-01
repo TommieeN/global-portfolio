@@ -19,6 +19,26 @@ import typescript from "../assets/techIcons/typescript.svg"
 import mongoDb from "../assets/techIcons/mongodb.svg"
 import jest from "../assets/techIcons/jest.svg"
 
+const navBarLinks = [
+  {
+    anchorTag: "#home",
+    title: "Home",
+  },
+  {
+    anchorTag: "#works",
+    title: "Works",
+  },
+  {
+    anchorTag: "#about",
+    title: "About",
+  },
+  {
+    anchorTag: "#contact",
+    title: "Contact",
+  },
+]
+
+
 const techIcons = [
   {
     id: 1,
@@ -136,4 +156,4 @@ const projects = [
     }
   ];
 
-  export { projects, techIcons }
+  export { projects, techIcons, navBarLinks }

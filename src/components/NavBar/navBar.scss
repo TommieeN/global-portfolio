@@ -12,6 +12,10 @@
     &__logo-text {
         font-weight: 700;
     }
+    &__hamburger {
+        border: none;
+        background-color: transparent;
+    }
     &__links {
         box-shadow: 2px 4px 15px #3171f2;
         position: fixed;
