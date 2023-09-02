@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <section className="project" id="works">
       <h2 className="project__header">Projects</h2>
-      <ul>
+      <ul className="project__list-container">
         {projects.map((project) => {
           return (
             <li key={project.id} className="project__item-container">
@@ -27,11 +27,18 @@ const Projects = () => {
                   alt={`${project.title}-project-image`}
                 />
               </div>
+              <div className="project__tech">
+                {project.techStack.map((tech) => {
+                  return ( 
+                    <p>{tech}</p>
+                  )
+                })}
+              </div>
               <div className="project__btn-container">
-                <a target="_blank" href={project.deploy}>
+                <a className="project__btn-link" target="_blank" href={project.deploy}>
                   <button className="project__btn">Deployment</button>
                 </a>
-                <a target="_blank" href={project.link}>
+                <a className="project__btn-link" target="_blank" href={project.link}>
                   <button className="project__btn">Code</button>
                 </a>
               </div>

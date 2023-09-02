@@ -109,7 +109,7 @@ const projects = [
       img: bandsite,
       link: "https://github.com/TommieeN/band-site-react-client",
       deploy: "https://my-band-site.netlify.app/",
-      techStack: ["React", "TailWind", "Vite", "Node.js", "Express.js", "React-Router-Dom"]
+      techStack: ["React", "TailWind", "Vite", "Node.js", "Express.js"]
     },
     {
       id: 3,
@@ -118,15 +118,15 @@ const projects = [
       img: brainflix,
       link: "https://github.com/TommieeN/Brainflix",
       deploy: "https://brainflix.onrender.com/",
-      techStack: ["React", "React-Router-Dom", "SASS", "BEM", "Node.js", "Express.js", "Rest API"]
+      techStack: ["React", "SASS", "BEM", "Node.js", "Express.js", "Rest API"]
     },
     {
       id: 4,
       title: "In-Stock",
-      description: "A collaborative project utilizing agile methodologies to create a full stack application.",
+      description: "Collaborative project utilizing agile methodologies.",
       img: inStock,
       link: "https://github.com/TommieeN/instock-client",
-      techStack: ["React", "React-Router-Dom", "SASS", "BEM", "Node.js", "Express.js", "mySQL", "Knex"]
+      techStack: ["React", "SASS", "BEM", "Node.js", "Express.js", "mySQL", "Knex"]
     },
     {
       id: 5,
@@ -135,7 +135,7 @@ const projects = [
       img: flags,
       link: "https://github.com/TommieeN/country-flags-api",
       deploy: "https://client-flags.onrender.com/",
-      techStack: ["React", "SASS", "Node.js", "Express.js", "Axios", "React-Router-Dom", "BEM"]
+      techStack: ["React", "SASS", "Node.js", "Express.js", "Axios", "BEM"]
     },
     {
       id: 6,
@@ -152,7 +152,7 @@ const projects = [
       description: "A todo app built with Svelte using firebase for auth and storing user data.",
       img: todoApp,
       link: "https://github.com/TommieeN/svelte-todo-crud-app/tree/main/src/routes",
-      techStack: ["Svelte", "CSS", "FireBase", "Authorization/Authentication"]
+      techStack: ["Svelte", "CSS", "FireBase", "Auth"]
     }
   ];
 

@@ -1,7 +1,12 @@
+@use "../../syles/partials/mixins.scss" as *;
+
 .landing-page {
   margin-top: 5rem;
   text-align: center;
   padding: 0 1rem;
+  @include tablet {
+    padding: 0 5rem;
+  }
   &__container {
     padding-top: 4rem;
   }
@@ -12,14 +17,26 @@
     font-size: 1.3rem;
     font-weight: 700;
     color: black;
+    @include tablet {
+      padding: 0.5rem 0;
+    }
   }
   &__text {
     margin: 1.5rem 0;
+    @include tablet {
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
   }
   &__logo-container {
     padding: 0.5rem;
     display: flex;
     justify-content: space-evenly;
+    @include tablet {
+      justify-content: center;
+      padding: 1rem 0;
+      gap: 3rem;
+    }
   }
   &__logo {
     color: gray;

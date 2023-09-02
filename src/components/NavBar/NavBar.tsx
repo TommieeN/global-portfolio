@@ -55,7 +55,7 @@ const NavBar = () => {
   return (
     <nav className={`nav-bar ${visible ? "" : "nav-bar--hidden"}`}>
       <header className="nav-bar__container">
-        <h3 className="nav-bar__logo-text">Tommy</h3>
+        <h3 className="nav-bar__logo-text">Tommy.</h3>
       </header>
       <div>
         <button
@@ -66,15 +66,15 @@ const NavBar = () => {
         >
           {hamburgerMenuOpen ? (
             <FontAwesomeIcon
+              className="nav-bar__icon"
               icon={faX}
               size="xl"
-              style={{ color: "#000000" }}
             />
           ) : (
             <FontAwesomeIcon
+              className="nav-bar__icon"
               icon={faBars}
               size="xl"
-              style={{ color: "#000000" }}
             />
           )}
         </button>

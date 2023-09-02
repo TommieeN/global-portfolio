@@ -1,5 +1,4 @@
 @use "../../syles/partials/mixins.scss" as *;
-
 .nav-bar {
     position: fixed;
     top: 0;
@@ -9,7 +8,7 @@
     justify-content: space-between;
     padding: 1.4rem 1rem;
     background: white;
-    box-shadow: 2px 4px 15px #bbd2ff;
+    // box-shadow: 2px 4px 15px #bbd2ff;
     &--hidden {
         display: none;
     }
@@ -24,6 +23,9 @@
     &__hamburger {
         border: none;
         background-color: transparent;
+    }
+    &__icon {
+
     }
     &__links {
         box-shadow: 2px 4px 15px #3171f2;

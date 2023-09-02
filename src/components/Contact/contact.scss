@@ -1,7 +1,16 @@
+@use "../../syles/partials/mixins.scss" as *;
 .form {
     padding: 1rem;
     border: 2px solid white;
     margin: 1rem 0;
+    @include tablet {
+        margin: 1rem 5rem;
+        padding: 0;
+    }
+    &__header {
+        margin-bottom: 2rem; 
+        text-align: left;
+    }
     &__container {
         display: flex;
         flex-direction: column;
@@ -49,6 +58,12 @@
         &:hover {
           background: white;
           color: black;
+        }
+        @include tablet {
+            padding: 0.8rem 0;
+            width: 100%;
+            font-size: 1.3rem;
+            font-weight: 500;
         }
     }
 }

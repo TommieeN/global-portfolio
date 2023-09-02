@@ -11,8 +11,8 @@ const Home = () => {
     <div>
         <NavBar />
         <LandingPage />
-        <TechStack />
         <Projects />
+        <TechStack />
         <About />
         <Contact />
         <Footer />

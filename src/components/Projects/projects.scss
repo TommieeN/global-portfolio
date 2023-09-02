@@ -1,13 +1,44 @@
+@use "../../syles/partials/mixins.scss" as *;
+
 .project {
   font-weight: 500;
-  margin: 2rem 0;
+  margin: 4rem 0;
+  &__header {
+    @include tablet {
+      text-align: left;
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
   &__image-container {
     padding: 0.8rem;
+    @include tablet {
+      padding: 1rem;
+    }
   }
   &__image {
     width: 100%;
     box-shadow: 0px 8px 15px rgb(45, 45, 45);
     border-radius: 1rem;
+  }
+  &__tech {
+    display: none;
+    @include tablet {
+      display: flex;
+      flex-direction: wrap;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0 1rem;
+    }
+  }
+  &__list-container {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
   &__item-container {
     background: rgb(255, 255, 255);
@@ -15,6 +46,11 @@
     margin: 2rem 1rem;
     border-radius: 10%;
     box-shadow: 0px 0px 17px #3171f2;
+    @include tablet {
+      margin: 1rem;
+      width: 45%;
+      box-shadow: none;
+    }
   }
   &__title-container {
     display: flex;
@@ -27,6 +63,9 @@
     font-weight: 700;
     font-size: 1.5rem;
     margin: 0 0.5rem;
+    @include tablet {
+      margin: 0;
+    }
   }
   &__links {
     color: black;
@@ -39,11 +78,19 @@
     margin: 1rem;
     font-size: 0.85rem;
     color: #858585;
+    @include tablet {
+      margin: 0;
+    }
   }
   &__btn-container {
     display: flex;
     justify-content: space-between;
     margin: 1rem;
+  }
+  &__btn-link {
+    @include tablet {
+      width: 45%;
+    }
   }
   &__btn {
     font-weight: 600;
@@ -57,6 +104,9 @@
     border-radius: 10px;
     transition: background 0.3s ease, color 0.4s ease;
     box-shadow: 0px 3px 7px rgb(45, 45, 45);
+    @include tablet {
+      width: 100%;
+    }
     &:hover {
       background: white;
       color: black;
