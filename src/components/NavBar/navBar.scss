@@ -1,9 +1,18 @@
+@use "../../syles/partials/mixins.scss" as *;
+
 .nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
-    margin-top: 1.5rem;
+    padding: 1.4rem 1rem;
+    background: white;
+    box-shadow: 2px 4px 15px #bbd2ff;
+    &--hidden {
+        display: none;
+    }
     &__container {
         display: flex;
         align-items: center;
