@@ -100,7 +100,7 @@ const projects = [
       img: journey,
       link: "https://github.com/TommieeN/Journey-React-Platformer-Game",
       deploy: "https://647fe614ec115515d29a0e71--golden-nasturtium-3edb6f.netlify.app/",
-      techStack: ["Canvas", "React", "SASS", "Object Oriented Programming"]
+      techStack: ["React", "SASS", "Object Oriented Programming"]
     },
     {
       id: 2,
@@ -118,7 +118,7 @@ const projects = [
       img: brainflix,
       link: "https://github.com/TommieeN/Brainflix",
       deploy: "https://brainflix.onrender.com/",
-      techStack: ["React", "SASS", "BEM", "Node.js", "Express.js", "Rest API"]
+      techStack: ["React", "SASS", "BEM", "Express.js", "Rest API"]
     },
     {
       id: 4,
@@ -126,7 +126,7 @@ const projects = [
       description: "Collaborative project utilizing agile methodologies.",
       img: inStock,
       link: "https://github.com/TommieeN/instock-client",
-      techStack: ["React", "SASS", "BEM", "Node.js", "Express.js", "mySQL", "Knex"]
+      techStack: ["React", "SASS", "Express.js", "mySQL", "Knex"]
     },
     {
       id: 5,
@@ -135,7 +135,7 @@ const projects = [
       img: flags,
       link: "https://github.com/TommieeN/country-flags-api",
       deploy: "https://client-flags.onrender.com/",
-      techStack: ["React", "SASS", "Node.js", "Express.js", "Axios", "BEM"]
+      techStack: ["React", "SASS", "Node.js", "Express.js", "Axios"]
     },
     {
       id: 6,
