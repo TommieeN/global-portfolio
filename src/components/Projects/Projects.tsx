@@ -30,9 +30,7 @@ const Projects = () => {
               <div className="project__tech">
                 {project.techStack.map((tech) => {
                   return ( 
-                    <div>
-                      <p>{tech}</p>
-                    </div>
+                      <p className="project__tags">{tech}</p>
                   )
                 })}
               </div>

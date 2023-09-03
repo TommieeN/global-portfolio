@@ -51,7 +51,7 @@ const NavBar = () => {
           })}
           <li className="nav-bar__link">
             <a
-              className="nav-bar__anchor-tag nav-bar__anchor-tag--resume"
+              className="nav-bar__anchor-tag"
               target="_blank"
               href="https://drive.google.com/file/d/1juta5yilnsAGWpyeo0jGFg7ZUDlaocA_/view"
             >
@@ -80,30 +80,35 @@ const NavBar = () => {
             variants={item}
             initial={{ height: 0 }}
             animate={{ height: 194 }}
-            transition={{ delayChildren: 15, staggerChildren: 11 }}
+            transition={{ duration: 0.2 }}
             exit="exit"
             className="nav-bar__links"
           >
-            {navBarLinks.map((navText) => {
-              return (
-                <AnchorLink
-                  onClick={() => {
-                    setHamburgerMenuOpen(false);
-                  }}
-                  key={navText.title}
-                  offset="80"
-                  href={navText.anchorTag}
-                >
-                  <motion.li
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    className="nav-bar__link"
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+              }}
+            >
+              {navBarLinks.map((navText) => {
+                return (
+                  <AnchorLink
+                    onClick={() => {
+                      setHamburgerMenuOpen(false);
+                    }}
+                    key={navText.title}
+                    offset="80"
+                    href={navText.anchorTag}
                   >
-                    {navText.title}
-                  </motion.li>
-                </AnchorLink>
-              );
-            })}
+                    <motion.li variants={item} className="nav-bar__link">
+                      {navText.title}
+                    </motion.li>
+                  </AnchorLink>
+                );
+              })}
+            </motion.div>
           </motion.ul>
         )}
       </div>

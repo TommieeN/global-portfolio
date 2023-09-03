@@ -3,20 +3,33 @@ import "./about.scss";
 const About = () => {
   return (
     <>
-      <h2 className="about-header"  id="about">About Me</h2>
+      <h2 className="about-header" id="about">
+        About Me
+      </h2>
       <section className="about">
         <p className="about__text">
-          As I Embark on a transition to the dynamic tech industry , I embrace
-          feedback as the driving force behind my Growth, recognizing that
-          Mistakes serve as stepping stones to mastery.
+          Hello there! I'm Tommy, and if it's not already evident, I'm embarking
+          on quite the unique journey. I've made the transition from a
+          background in retail to the bustling world of technology. Currently
+          calling Surrey, B.C, Canada, my home, I've honed a keen knack for
+          problem-solving and an insatiable thirst for learning.
         </p>
         <p className="about__text">
-          Beyond coding, I'm often out exploring Vancouver with my wife, sipping
-          Bubble-Tea, and discovering the city's Charms.
+          My expertise lies in full-stack development, with a strong proficiency
+          in technologies like React and Node. I firmly believe in selecting the
+          most suitable tools for each unique task. Presently, I'm channeling my
+          skills and enthusiasm as a teaching assistant at BrainStation, where I
+          find myself immersed in a myriad of exhilarating challenges.
         </p>
         <p className="about__text">
-          Ready to infuse my newfound skills into innovative projects feel free
-          to talk to me about anything on LinkedIn 🤝!
+          Beyond the world of coding, I relish the opportunity to explore
+          Vancouver's picturesque landscapes alongside my wife. If you happen to
+          cross paths with me on a Sunday, chances are I'll be savoring a
+          delightful bubble tea 🧋.
+        </p>
+        <p className="about__text">
+          Feel free to connect with me on LinkedIn if you'd like to delve deeper
+          into any topic or simply share a friendly chat. 🤝
         </p>
       </section>
     </>

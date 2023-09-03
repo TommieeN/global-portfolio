@@ -11,10 +11,7 @@
   backdrop-filter: blur(25px); /* Adjust the blur radius as needed */
   -webkit-backdrop-filter: blur(10px);
   @include desktop {
-    width: 50%;
-  }
-  &--hidden {
-    display: none;
+    max-width: 60rem;
   }
   &__container {
     display: flex;

@@ -32,6 +32,9 @@
       padding: 0 1rem;
     }
   }
+  &__tags {
+    color: #3171f2;
+  }
   &__list-container {
     @include tablet {
       display: flex;
