@@ -142,7 +142,7 @@ const Contact = () => {
           placeholder="Send me an email! :)"
         />
         <button className="form__btn" onClick={errorToast} type="submit">
-          Send
+          {loading ? "Sending..." : "Send"}
         </button>
         <ToastContainer
           position="top-center"
