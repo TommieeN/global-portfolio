@@ -3,16 +3,13 @@ import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 
 import "./navBar.scss";
 
-import { useState, useEffect } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { navBarLinks } from "../../constants";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const NavBar = () => {
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
-  const [currentScrollPos, setCurrentScrollPos] = useState(0);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(false);
 
   const item = {
     hidden: { y: 20, opacity: 0 },
@@ -31,33 +28,37 @@ const NavBar = () => {
     },
   };
 
-  // Hide navbar on scroll down, display on scroll up
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPos = window.scrollY;
-      setCurrentScrollPos(scrollPos);
-
-      if (scrollPos > prevScrollPos) {
-        setVisible(false);
-      } else {
-        setVisible(true);
-      }
-
-      setPrevScrollPos(scrollPos);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [prevScrollPos]);
-
   return (
-    <nav className={`nav-bar ${visible ? "" : "nav-bar--hidden"}`}>
+    <nav className="nav-bar">
       <header className="nav-bar__container">
         <h3 className="nav-bar__logo-text">Tommy.</h3>
       </header>
       <div>
+        <ul className="nav-bar__desktop">
+          {navBarLinks.map((navText) => {
+            return (
+              <li className="nav-bar__anchor-tag">
+                <AnchorLink
+                  className="nav-bar__link"
+                  key={navText.title}
+                  offset="80"
+                  href={navText.anchorTag}
+                >
+                  {navText.title}
+                </AnchorLink>
+              </li>
+            );
+          })}
+          <li className="nav-bar__link">
+            <a
+              className="nav-bar__anchor-tag nav-bar__anchor-tag--resume"
+              target="_blank"
+              href="https://drive.google.com/file/d/1juta5yilnsAGWpyeo0jGFg7ZUDlaocA_/view"
+            >
+              Resume
+            </a>
+          </li>
+        </ul>
         <button
           className="nav-bar__hamburger"
           onClick={() => {
@@ -65,11 +66,7 @@ const NavBar = () => {
           }}
         >
           {hamburgerMenuOpen ? (
-            <FontAwesomeIcon
-              className="nav-bar__icon"
-              icon={faX}
-              size="xl"
-            />
+            <FontAwesomeIcon className="nav-bar__icon" icon={faX} size="xl" />
           ) : (
             <FontAwesomeIcon
               className="nav-bar__icon"
@@ -78,39 +75,37 @@ const NavBar = () => {
             />
           )}
         </button>
-        {/* <AnimatePresence> */}
-          {hamburgerMenuOpen && (
-            <motion.ul
-              variants={item}
-              initial={{ height: 0 }}
-              animate={{ height: 194 }}
-              transition={{ delayChildren: 15, staggerChildren: 11 }}
-              exit="exit"
-              className="nav-bar__links"
-            >
-              {navBarLinks.map((navText) => {
-                return (
-                  <AnchorLink
-                    onClick={() => {
-                      setHamburgerMenuOpen(false);
-                    }}
-                    key={navText.title}
-                    offset="80"
-                    href={navText.anchorTag}
+        {hamburgerMenuOpen && (
+          <motion.ul
+            variants={item}
+            initial={{ height: 0 }}
+            animate={{ height: 194 }}
+            transition={{ delayChildren: 15, staggerChildren: 11 }}
+            exit="exit"
+            className="nav-bar__links"
+          >
+            {navBarLinks.map((navText) => {
+              return (
+                <AnchorLink
+                  onClick={() => {
+                    setHamburgerMenuOpen(false);
+                  }}
+                  key={navText.title}
+                  offset="80"
+                  href={navText.anchorTag}
+                >
+                  <motion.li
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    className="nav-bar__link"
                   >
-                    <motion.li
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      className="nav-bar__link"
-                    >
-                      {navText.title}
-                    </motion.li>
-                  </AnchorLink>
-                );
-              })}
-            </motion.ul>
-          )}
-        {/* </AnimatePresence> */}
+                    {navText.title}
+                  </motion.li>
+                </AnchorLink>
+              );
+            })}
+          </motion.ul>
+        )}
       </div>
     </nav>
   );

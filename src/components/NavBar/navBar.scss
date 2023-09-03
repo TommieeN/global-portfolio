@@ -1,55 +1,70 @@
 @use "../../syles/partials/mixins.scss" as *;
 .nav-bar {
-    position: fixed;
-    top: 0;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 1rem;
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(25px); /* Adjust the blur radius as needed */
+  -webkit-backdrop-filter: blur(10px);
+  @include desktop {
+    width: 50%;
+  }
+  &--hidden {
+    display: none;
+  }
+  &__container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1.4rem 1rem;
+    gap: 0.5rem;
+  }
+  &__logo-text {
+    font-weight: 700;
+  }
+  &__desktop {
+    display: none;
+    @include tablet {
+      display: flex;
+    }
+  }
+  &__anchor-tag {
+    list-style: none;
+    display: flex;
+    color: black;
+  }
+  &__hamburger {
+    border: none;
+    background-color: transparent;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__links {
+    box-shadow: 2px 4px 15px #3171f2;
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0.8rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    width: max-content;
+    border-radius: 10px;
     background: white;
-    // box-shadow: 2px 4px 15px #bbd2ff;
-    &--hidden {
-        display: none;
+  }
+  &__link {
+    border-radius: 8px;
+    padding: 0.8rem;
+    color: black;
+    width: 100%;
+    &:hover {
+      color: #3171f2;
+      background: rgb(248, 244, 244);
+      transition: 500ms;
     }
-    &__container {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    &__logo-text {
-        font-weight: 700;
-    }
-    &__hamburger {
-        border: none;
-        background-color: transparent;
-    }
-    &__icon {
-
-    }
-    &__links {
-        box-shadow: 2px 4px 15px #3171f2;
-        position: fixed;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        margin: 0.5rem 0.8rem;
-        padding: 0.5rem;
-        font-size: 1rem;
-        font-weight: 700;
-        width: max-content;
-        border-radius: 10px;
-        background: white;
-    }
-    &__link {
-        border-radius: 8px;
-        padding: 0.8rem;
-        color: black;
-        width: 100%;
-        &:hover {
-            color: #3171f2;
-            background:rgb(248, 244, 244);
-            transition: 500ms;
-        }
-    }
+  }
 }
