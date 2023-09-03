@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./contact.scss";
 
 const Contact = () => {
-  const formRef = useRef();
+  const formRef = useRef<HTMLFormElement | null>(null);
 
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
@@ -17,12 +17,12 @@ const Contact = () => {
 
   const errorToast = () => "Please fill in all fields!";
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     // Empty fields check

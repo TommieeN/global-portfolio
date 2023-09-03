@@ -4,7 +4,7 @@ import { projects } from "../../constants";
 const Projects = () => {
   return (
     <section className="project" id="works">
-      <h2 className="project__header">Projects</h2>
+      <h2 className="project__header">Projects.</h2>
       <ul className="project__list-container">
         {projects.map((project) => {
           return (

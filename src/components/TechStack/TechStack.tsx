@@ -5,7 +5,7 @@ const TechStack = () => {
   return (
     <>
       <div className="tech-header">
-        <h2 className="tech-header__heading">Tech Stack</h2>
+        <h2 className="tech-header__heading">Tech Stack.</h2>
       </div>
       <ul className="tech-stack">
         {techIcons.map((icon) => {
