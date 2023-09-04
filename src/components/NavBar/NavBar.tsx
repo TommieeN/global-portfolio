@@ -41,22 +41,18 @@ const NavBar = () => {
         <h3 className="nav-bar__logo-text">Tommy.</h3>
       </header>
       <div>
-        <motion.ul 
-        variants={container}
-        initial="hidden"
-        animate="visible"
-        transition={{duration: 0.5}}
-        className="nav-bar__desktop"
+        <motion.ul
+          variants={container}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.5 }}
+          className="nav-bar__desktop"
         >
           {navBarLinks.map((navText) => {
             return (
-              <motion.li 
-                variants={item}
-              className="nav-bar__anchor-tag"
-              >
+              <motion.li key={navText.title} variants={item} className="nav-bar__anchor-tag">
                 <AnchorLink
                   className="nav-bar__link"
-                  key={navText.title}
                   offset="80"
                   href={navText.anchorTag}
                 >
@@ -65,9 +61,7 @@ const NavBar = () => {
               </motion.li>
             );
           })}
-          <motion.li 
-            variants={item}
-          className="nav-bar__link">
+          <motion.li variants={item} className="nav-bar__link">
             <a
               className="nav-bar__anchor-tag"
               target="_blank"
