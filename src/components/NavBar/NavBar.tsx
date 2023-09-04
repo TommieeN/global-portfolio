@@ -27,17 +27,33 @@ const NavBar = () => {
       },
     },
   };
-
+  const container = {
+    visible: {
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.1, // Adjust this value to control the delay between children
+      },
+    },
+  };
   return (
     <nav className="nav-bar">
       <header className="nav-bar__container">
         <h3 className="nav-bar__logo-text">Tommy.</h3>
       </header>
       <div>
-        <ul className="nav-bar__desktop">
+        <motion.ul 
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        transition={{duration: 0.5}}
+        className="nav-bar__desktop"
+        >
           {navBarLinks.map((navText) => {
             return (
-              <li className="nav-bar__anchor-tag">
+              <motion.li 
+                variants={item}
+              className="nav-bar__anchor-tag"
+              >
                 <AnchorLink
                   className="nav-bar__link"
                   key={navText.title}
@@ -46,10 +62,12 @@ const NavBar = () => {
                 >
                   {navText.title}
                 </AnchorLink>
-              </li>
+              </motion.li>
             );
           })}
-          <li className="nav-bar__link">
+          <motion.li 
+            variants={item}
+          className="nav-bar__link">
             <a
               className="nav-bar__anchor-tag"
               target="_blank"
@@ -57,8 +75,8 @@ const NavBar = () => {
             >
               Resume
             </a>
-          </li>
-        </ul>
+          </motion.li>
+        </motion.ul>
         <button
           className="nav-bar__hamburger"
           onClick={() => {
