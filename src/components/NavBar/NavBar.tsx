@@ -65,7 +65,7 @@ const NavBar = () => {
             <a
               className="nav-bar__anchor-tag"
               target="_blank"
-              href="https://drive.google.com/file/d/1juta5yilnsAGWpyeo0jGFg7ZUDlaocA_/view"
+              href="https://drive.google.com/file/d/1h8pz_otS4TyHLdTXXhW0pr5kiR8AO74S/view?usp=sharing"
             >
               Resume
             </a>
