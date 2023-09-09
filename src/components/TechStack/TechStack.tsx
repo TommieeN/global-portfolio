@@ -1,5 +1,11 @@
-import "./techStack.scss";
 import { techIcons } from "../../constants";
+import "./techStack.scss";
+
+interface TechIcon {
+  id: number;
+  img: string;
+  title: string;
+}
 
 const TechStack = () => {
   return (
@@ -8,7 +14,7 @@ const TechStack = () => {
         <h2 className="tech-header__heading">Tech Stack.</h2>
       </div>
       <ul className="tech-stack">
-        {techIcons.map((icon) => {
+        {techIcons.map((icon: TechIcon) => {
           return (
             <li key={icon.id} className="tech-stack__list-item">
               <img

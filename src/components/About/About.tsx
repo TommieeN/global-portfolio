@@ -1,6 +1,6 @@
 import "./about.scss";
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <>
       <h2 className="about-header" id="about">

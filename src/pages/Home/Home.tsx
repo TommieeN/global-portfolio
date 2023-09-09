@@ -1,5 +1,5 @@
-import LandingPage from "../../components/LandingPage/LandingPage";
 import NavBar from "../../components/NavBar/NavBar";
+import LandingPage from "../../components/LandingPage/LandingPage";
 import Projects from "../../components/Projects/Projects";
 import TechStack from "../../components/TechStack/TechStack";
 import About from "../../components/About/About";

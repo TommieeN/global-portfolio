@@ -1,14 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
-
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { motion } from "framer-motion";
+import { navBarLinks } from "../../constants";
+import { useState } from "react";
 import "./navBar.scss";
 
-import AnchorLink from "react-anchor-link-smooth-scroll";
-import { navBarLinks } from "../../constants";
-import { motion } from "framer-motion";
-import { useState } from "react";
+interface NavBarLink {
+  title: string;
+  anchorTag: string;
+}
 
-const NavBar = () => {
+const NavBar: React.FC = () => {
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
 
   const item = {
@@ -31,7 +34,7 @@ const NavBar = () => {
     visible: {
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.1, // Adjust this value to control the delay between children
+        staggerChildren: 0.1,
       },
     },
   };
@@ -48,9 +51,13 @@ const NavBar = () => {
           transition={{ duration: 0.5 }}
           className="nav-bar__desktop"
         >
-          {navBarLinks.map((navText) => {
+          {navBarLinks.map((navText: NavBarLink) => {
             return (
-              <motion.li key={navText.title} variants={item} className="nav-bar__anchor-tag">
+              <motion.li
+                key={navText.title}
+                variants={item}
+                className="nav-bar__anchor-tag"
+              >
                 <AnchorLink
                   className="nav-bar__link"
                   offset="80"
@@ -104,7 +111,7 @@ const NavBar = () => {
                 visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
               }}
             >
-              {navBarLinks.map((navText) => {
+              {navBarLinks.map((navText: NavBarLink) => {
                 return (
                   <AnchorLink
                     onClick={() => {

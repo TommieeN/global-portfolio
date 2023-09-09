@@ -1,12 +1,22 @@
-import "./projects.scss";
 import { projects } from "../../constants";
+import "./projects.scss";
 
-const Projects = () => {
+interface Project {
+  id: number;
+  title: string;
+  link: string;
+  description: string;
+  img: string;
+  techStack: string[];
+  deploy?: string;
+}
+
+const Projects: React.FC = () => {
   return (
     <section className="project" id="works">
       <h2 className="project__header">Projects.</h2>
       <ul className="project__list-container">
-        {projects.map((project) => {
+        {projects.map((project: Project) => {
           return (
             <li key={project.id} className="project__item-container">
               <div className="project__title-container">
@@ -28,17 +38,27 @@ const Projects = () => {
                 />
               </div>
               <div className="project__tech">
-                {project.techStack.map((tech) => {
-                  return ( 
-                    <p key={tech} className="project__tags">{tech}</p>
-                  )
+                {project.techStack.map((tech: string) => {
+                  return (
+                    <p key={tech} className="project__tags">
+                      {tech}
+                    </p>
+                  );
                 })}
               </div>
               <div className="project__btn-container">
-                <a className="project__btn-link" target="_blank" href={project.deploy}>
+                <a
+                  className="project__btn-link"
+                  target="_blank"
+                  href={project.deploy}
+                >
                   <button className="project__btn">Deployment</button>
                 </a>
-                <a className="project__btn-link" target="_blank" href={project.link}>
+                <a
+                  className="project__btn-link"
+                  target="_blank"
+                  href={project.link}
+                >
                   <button className="project__btn">Code</button>
                 </a>
               </div>

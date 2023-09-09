@@ -1,12 +1,10 @@
-import "./landingPage.scss";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import "./landingPage.scss";
 
-const LandingPage = () => {
+const LandingPage: React.FC = () => {
   return (
     <div className="landing-page" id="home">
       <div className="landing-page__container">
@@ -21,14 +19,22 @@ const LandingPage = () => {
         </p>
       </div>
       <div className="landing-page__logo-container">
-        <a href="https://github.com/TommieeN" target="_blank">
+        <a
+          href="https://github.com/TommieeN"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon
             className="landing-page__logo"
             icon={faGithub}
             size="xl"
           />
         </a>
-        <a href="https://www.linkedin.com/in/tommy-nguyenn/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/tommy-nguyenn/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon
             className="landing-page__logo"
             icon={faLinkedin}

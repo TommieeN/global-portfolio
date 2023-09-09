@@ -1,11 +1,10 @@
-import emailjs from "@emailjs/browser";
-import { useState, useRef } from "react";
+import { useState, useRef, ChangeEvent, FormEvent } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import emailjs from "@emailjs/browser";
 import "react-toastify/dist/ReactToastify.css";
-
 import "./contact.scss";
 
-const Contact = () => {
+const Contact: React.FC = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
 
   const [loading, setLoading] = useState(false);
@@ -17,12 +16,14 @@ const Contact = () => {
 
   const errorToast = () => "Please fill in all fields!";
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = event.target;
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     // Empty fields check
@@ -58,8 +59,8 @@ const Contact = () => {
 
     setLoading(true);
 
-    emailjs
-      .send(
+    try {
+      await emailjs.send(
         "service_ywprvph",
         "template_ls2e94b",
         {
@@ -70,48 +71,43 @@ const Contact = () => {
           message: form.message,
         },
         "s6jc0I844TxtaN1mY"
-      )
-      .then(
-        () => {
-          setLoading(false);
-          toast.success(
-            "Thank you. I will get back to you as soon as possible.",
-            {
-              position: "top-center",
-              autoClose: 4000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "dark",
-            }
-          );
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.log(error);
-          toast.error("Something went wrong. Please try again.", {
-            position: "top-center",
-            autoClose: 4000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
-        }
       );
+
+      setLoading(false);
+      toast.success("Thank you. I will get back to you as soon as possible.", {
+        position: "top-center",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      setLoading(false);
+      console.error(error);
+      toast.error("Something went wrong. Please try again.", {
+        position: "top-center",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    }
   };
 
   return (
-    <div className="form"  id="contact">
+    <div className="form" id="contact">
       <h2 className="form__header">Get In Touch!</h2>
       <form className="form__container" ref={formRef} onSubmit={handleSubmit}>
         <div className="form__input-container">
