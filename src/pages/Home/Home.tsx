@@ -13,9 +13,9 @@ const Home = () => {
       <NavBar />
       <LandingPage />
       <Line />
-      <Projects />
       <About />
       <TechStack />
+      <Projects />
       <Contact />
       <Footer />
     </>

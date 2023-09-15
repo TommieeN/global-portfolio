@@ -101,7 +101,7 @@ const projects = [
     link: "https://github.com/TommieeN/Journey-React-Platformer-Game",
     deploy:
       "https://647fe614ec115515d29a0e71--golden-nasturtium-3edb6f.netlify.app/",
-    techStack: ["React", "SASS", "Object Oriented Programming"],
+    techStack: ["React", "SASS", "Object Oriented"],
   },
   {
     id: 2,
@@ -111,7 +111,7 @@ const projects = [
     img: bandsite,
     link: "https://github.com/TommieeN/band-site-react-client",
     deploy: "https://my-band-site.netlify.app/",
-    techStack: ["React", "TailWind", "Vite", "Node.js", "Express.js"],
+    techStack: ["React", "TailWind", "Vite", "Node.js"],
   },
   {
     id: 3,
@@ -121,7 +121,7 @@ const projects = [
     img: brainflix,
     link: "https://github.com/TommieeN/Brainflix",
     deploy: "https://brainflix.onrender.com/",
-    techStack: ["React", "SASS", "BEM", "Express.js", "Rest API"],
+    techStack: ["React", "Express.js", "RestAPI"],
   },
   {
     id: 4,
@@ -129,7 +129,7 @@ const projects = [
     description: "This collaborative project followed agile methodologies, involving three other web developers from our class. Our mission: design an efficient inventory system for warehouse management. We relied on MySQL for the database and React for the frontend. To coordinate tasks, we used Jira for ticket assignment, and maintained version control with Git.",
     img: inStock,
     link: "https://github.com/TommieeN/instock-client",
-    techStack: ["React", "SASS", "Express.js", "mySQL", "Knex"],
+    techStack: ["React", "SASS", "Express.js", "mySQL"],
   },
   {
     id: 5,
@@ -138,20 +138,20 @@ const projects = [
     img: flags,
     link: "https://github.com/TommieeN/country-flags-api",
     deploy: "https://client-flags.onrender.com/",
-    techStack: ["React", "SASS", "Node.js", "Express.js", "Axios"],
+    techStack: ["React", "SASS", "Node.js", "Axios"],
   },
   {
     id: 6,
-    title: "Rock Paper Scissors!",
+    title: "Game",
     description: "Engaged in a captivating game of rock-paper-scissors, inspired by a frontend mentor challenge. This project involved transforming Figma mockups into a fully functional game, providing an interactive and enjoyable gaming experience.",
     img: rockPaperScissors,
     link: "https://github.com/TommieeN/rock-paper-scissors/tree/main",
     deploy: "https://rock-paper-scissors-tommy.netlify.app/",
-    techStack: ["Typescript", "React", "Tailwind", "FramerMotion"],
+    techStack: ["Typescript", "Tailwind", "FramerMotion"],
   },
   {
     id: 7,
-    title: "Todo Crud App",
+    title: "Auth App",
     description:
       "A meticulously crafted to-do application developed with Svelte, seamlessly integrating Firebase for user authentication and secure storage of valuable user data. Enjoy a streamlined and efficient task management experience.",
     img: todoApp,
