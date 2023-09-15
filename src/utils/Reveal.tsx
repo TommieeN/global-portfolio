@@ -3,10 +3,10 @@ import { motion, useInView, useAnimation } from "framer-motion";
 
 interface Props {
   children: JSX.Element;
-  width?: "50%" | "100%";
+  width?: "fit-content" | "100%";
 }
 
-export const Reveal = ({ children, width = "100%" }: Props) => {
+export const Reveal = ({ children, width = "fit-content" }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -24,12 +24,12 @@ export const Reveal = ({ children, width = "100%" }: Props) => {
     <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
       <motion.div
         variants={{
-          hidden: { opacity: 0, y: 75 },
+          hidden: { opacity: 0, y: 100 },
           visible: { opacity: 1, y: 0 },
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
       >
         {children}
       </motion.div>
@@ -44,7 +44,7 @@ export const Reveal = ({ children, width = "100%" }: Props) => {
       style={{
         position: "absolute",
         top: 4,
-        bottom: 4,
+        bottom: 0,
         left: 0,
         right: 0,
         background: "#3171f2",

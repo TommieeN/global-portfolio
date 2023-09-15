@@ -55,7 +55,7 @@ const Projects: React.FC = () => {
                   })}
                 </div>
               </Reveal>
-              <Reveal>
+              <Reveal width="100%">
                 <div className="project__btn-container">
                   <a
                     className="project__btn-link"

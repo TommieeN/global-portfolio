@@ -6,6 +6,7 @@
 
 .about {
   @include flex-col;
+  text-align: center;
   justify-content: center;
   margin: 2rem;
   @include tablet {
