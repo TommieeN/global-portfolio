@@ -7,9 +7,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.4rem 1rem;
-  background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
-  backdrop-filter: blur(25px); /* Adjust the blur radius as needed */
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.5); 
+  backdrop-filter: blur(25px); 
   -webkit-backdrop-filter: blur(10px);
   @include desktop {
     max-width: 60rem;

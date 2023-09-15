@@ -1,9 +1,5 @@
 @use "../../syles/partials/mixins.scss" as *;
 
-.about-header {
-  margin-top: 6rem;
-}
-
 .about {
   @include flex-col;
   text-align: center;

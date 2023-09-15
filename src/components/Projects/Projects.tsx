@@ -1,5 +1,8 @@
 import { projects } from "../../constants";
 import { Reveal } from "../../utils/Reveal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./projects.scss";
 
 interface ProjectProps {
@@ -20,22 +23,36 @@ const Projects: React.FC = () => {
         {projects.map((project: ProjectProps) => {
           return (
             <div key={project.id} className="project__item-container">
-              <Reveal>
+              <Reveal width="100%">
                 <div className="project__title-container">
                   <p className="project__title">{project.title}</p>
+                  <div className="project__icons">
                   <a
                     target="_blank"
                     className="project__links"
                     href={project.link}
-                  ></a>
+                  >
+                    <FontAwesomeIcon
+                      className="landing-page__logo"
+                      icon={faGithub}
+                      size="xl"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    className="project__links"
+                    href={project.deploy}
+                  >
+                    <FontAwesomeIcon
+                      className="landing-page__logo"
+                      icon={faArrowRightFromBracket}
+                      size="xl"
+                    />
+                  </a>
+                  </div>
                 </div>
               </Reveal>
-              <Reveal>
-                <div className="project__description-container">
-                  <p className="project__description">{project.description}</p>
-                </div>
-              </Reveal>
-              <Reveal>
+              <Reveal overflow="initial">
                 <div className="project__image-container">
                   <img
                     className="project__image"
@@ -45,32 +62,19 @@ const Projects: React.FC = () => {
                 </div>
               </Reveal>
               <Reveal>
+                <div className="project__description-container">
+                  <p className="project__description">{project.description}</p>
+                </div>
+              </Reveal>
+              <Reveal width="100%">
                 <div className="project__tech">
                   {project.techStack.map((tech: string) => {
                     return (
                       <p key={tech} className="project__tags">
-                        {tech}
+                        -{tech}-
                       </p>
                     );
                   })}
-                </div>
-              </Reveal>
-              <Reveal width="100%">
-                <div className="project__btn-container">
-                  <a
-                    className="project__btn-link"
-                    target="_blank"
-                    href={project.deploy}
-                  >
-                    <button className="project__btn">Deployment</button>
-                  </a>
-                  <a
-                    className="project__btn-link"
-                    target="_blank"
-                    href={project.link}
-                  >
-                    <button className="project__btn">Code</button>
-                  </a>
                 </div>
               </Reveal>
             </div>

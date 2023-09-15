@@ -25,7 +25,7 @@ const LandingPage: React.FC = () => {
           </p>
         </Reveal>
       </div>
-      <Reveal>
+      <Reveal width="100%">
         <div className="landing-page__logo-container">
           <a
             href="https://github.com/TommieeN"
