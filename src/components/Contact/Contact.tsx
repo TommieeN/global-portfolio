@@ -3,6 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import "react-toastify/dist/ReactToastify.css";
 import "./contact.scss";
+import { SlideIn } from "../../utils/Reveal";
 
 const Contact: React.FC = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
@@ -107,53 +108,55 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="form" id="contact">
-      <h2 className="form__header">Get In Touch!</h2>
-      <form className="form__container" ref={formRef} onSubmit={handleSubmit}>
-        <div className="form__input-container">
-          <input
-            className="form__input"
-            type="text"
-            name="name"
-            value={form.name}
+    <SlideIn width="100%">
+      <div className="form" id="contact">
+        <h2 className="form__header">Get In Touch!</h2>
+        <form className="form__container" ref={formRef} onSubmit={handleSubmit}>
+          <div className="form__input-container">
+            <input
+              className="form__input"
+              type="text"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              placeholder="Name"
+            />
+            <input
+              className="form__input"
+              type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="Email"
+            />
+          </div>
+          <textarea
+            className="form__text-area"
+            rows={10}
+            cols={20}
+            name="message"
+            value={form.message}
             onChange={handleChange}
-            placeholder="Name"
+            placeholder="Send me an email! :)"
           />
-          <input
-            className="form__input"
-            type="email"
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-            placeholder="Email"
+          <button className="form__btn" onClick={errorToast} type="submit">
+            {loading ? "Sending..." : "Send"}
+          </button>
+          <ToastContainer
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
           />
-        </div>
-        <textarea
-          className="form__text-area"
-          rows={10}
-          cols={20}
-          name="message"
-          value={form.message}
-          onChange={handleChange}
-          placeholder="Send me an email! :)"
-        />
-        <button className="form__btn" onClick={errorToast} type="submit">
-          {loading ? "Sending..." : "Send"}
-        </button>
-        <ToastContainer
-          position="top-center"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-        />
-      </form>
-    </div>
+        </form>
+      </div>
+    </SlideIn>
   );
 };
 

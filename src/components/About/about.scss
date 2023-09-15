@@ -1,5 +1,11 @@
 @use "../../syles/partials/mixins.scss" as *;
 
+.about-header {
+  @include tablet {
+    padding-top: 5rem
+  }
+}
+
 .about {
   @include flex-col;
   text-align: center;
