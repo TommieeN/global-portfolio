@@ -6,7 +6,7 @@ const About: React.FC = () => {
     <>
       <Reveal width="100%">
         <h2 className="about-header" id="about">
-          About Me.
+          About Me<span className="about-header--blue">.</span>
         </h2>
       </Reveal>
       <section className="about">

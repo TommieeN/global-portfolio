@@ -18,7 +18,7 @@ interface ProjectProps {
 const Projects: React.FC = () => {
   return (
     <section className="project" id="works">
-      <h2 className="project__header">Projects.</h2>
+      <h2 className="project__header">Projects<span className="project__header--blue">.</span></h2>
       <div className="project__list-container">
         {projects.map((project: ProjectProps) => {
           return (

@@ -10,6 +10,9 @@
   &__header {
     margin-bottom: 2rem;
     text-align: left;
+    &--blue {
+      color: #3171f2;
+    }
   }
   &__container {
     @include flex-col;

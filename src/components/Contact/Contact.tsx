@@ -110,7 +110,7 @@ const Contact: React.FC = () => {
   return (
     <SlideIn width="100%">
       <div className="form" id="contact">
-        <h2 className="form__header">Get In Touch!</h2>
+        <h2 className="form__header">Get In Touch<span className="form__header--blue">!</span></h2>
         <form className="form__container" ref={formRef} onSubmit={handleSubmit}>
           <div className="form__input-container">
             <input

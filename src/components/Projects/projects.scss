@@ -9,6 +9,9 @@
       margin-left: 2rem;
       margin-bottom: 1rem;
     }
+    &--blue {
+      color: #3171f2;
+    }
   }
   &__image-container {
     padding: 0.8rem;
@@ -47,7 +50,6 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: center;
     }
   }
   &__item-container {
@@ -91,9 +93,6 @@
     margin: 0.5rem 0;
     font-size: 0.85rem;
     color: #858585;
-    @include tablet {
-      margin: 0;
-    }
     @include desktop {
       height: 32px;
     }

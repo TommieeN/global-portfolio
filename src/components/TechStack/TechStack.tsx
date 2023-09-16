@@ -13,7 +13,7 @@ const TechStack = () => {
     <>
       <SlideIn>
         <div className="tech-header">
-          <h2 className="tech-header__heading">Tech Stack.</h2>
+          <h2 className="tech-header__heading">Tech Stack<span className="tech-header__heading--blue">.</span></h2>
         </div>
       </SlideIn>
       <ul className="tech-stack">

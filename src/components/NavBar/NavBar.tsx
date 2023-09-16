@@ -41,7 +41,7 @@ const NavBar: React.FC = () => {
   return (
     <nav className="nav-bar">
       <header className="nav-bar__container">
-        <h3 className="nav-bar__logo-text">Tommy.</h3>
+        <h3 className="nav-bar__logo-text">Tommy<span className="nav-bar__logo-text--blue">.</span></h3>
       </header>
       <div>
         <motion.ul
@@ -60,7 +60,7 @@ const NavBar: React.FC = () => {
               >
                 <AnchorLink
                   className="nav-bar__link"
-                  offset="80"
+                  offset="136"
                   href={navText.anchorTag}
                 >
                   {navText.title}

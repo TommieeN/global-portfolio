@@ -21,6 +21,9 @@
   }
   &__logo-text {
     font-weight: 700;
+    &--blue {
+      color: #3171f2;
+    }
   }
   &__desktop {
     display: none;
