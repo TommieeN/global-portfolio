@@ -12,11 +12,11 @@ const About: React.FC = () => {
       <section className="about">
         <Reveal>
           <p className="about__text">
-            Hello there! I'm Tommy, and if it's not already evident, I'm
-            embarking on quite the unique journey. I've made the transition from
-            a background in retail to the bustling world of technology.
-            Currently calling Surrey, B.C, Canada, my home, I've honed a keen
-            knack for problem-solving and an insatiable thirst for learning.
+            Hello there! I'm Tommy, and I'm in the process of making a
+            significant career transition from retail to the thriving world of
+            technology. Currently calling Surrey, B.C, Canada, my home, I've
+            honed a keen knack for problem-solving and an insatiable thirst for
+            learning.
           </p>
         </Reveal>
         <Reveal>
