@@ -134,7 +134,7 @@ const projects = [
   {
     id: 5,
     title: "Flags",
-    description: "Crafted a user-friendly flag directory featuring flags from across the globe. Users can seamlessly search, filter by region, and navigate through an extensive list of flags. Upon selecting a flag, they can access in-depth information about the corresponding country's flag. Additionally, the application boasts a convenient dark mode feature, utilizing local storage to remember the user's preferred theme across sessions.",
+    description: "Crafted a user-friendly flag directory featuring flags from across the globe. Users can seamlessly search, filter by region, and navigate through an extensive list of flags. Upon selecting a flag, they can access in-depth information about the corresponding country's flag. Additionally, added darkmode since I like dark themes!",
     img: flags,
     link: "https://github.com/TommieeN/country-flags-api",
     deploy: "https://client-flags.onrender.com/",
