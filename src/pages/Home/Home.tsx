@@ -5,14 +5,12 @@ import TechStack from "../../components/TechStack/TechStack";
 import About from "../../components/About/About";
 import Contact from "../../components/Contact/Contact";
 import Footer from "../../components/Footer/Footer";
-import Line from "../../components/Line/Line";
 
 const Home = () => {
   return (
     <>
       <NavBar />
       <LandingPage />
-      <Line />
       <About />
       <TechStack />
       <Projects />

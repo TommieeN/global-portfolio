@@ -71,7 +71,7 @@ const Projects: React.FC = () => {
                   {project.techStack.map((tech: string) => {
                     return (
                       <p key={tech} className="project__tags">
-                        -{tech}-
+                        #{tech}
                       </p>
                     );
                   })}

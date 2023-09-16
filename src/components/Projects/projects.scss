@@ -51,8 +51,7 @@
     }
   }
   &__item-container {
-    background: rgb(255, 255, 255);
-    border: 3px solid rgb(255, 255, 255);
+    background-color: #f1f5f9;
     margin: 2rem 1rem;
     border-radius: 10%;
     @include tablet {

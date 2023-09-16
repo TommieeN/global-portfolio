@@ -2,11 +2,10 @@
 
 .form {
   padding: 1rem;
-  border: 2px solid white;
   margin: 1rem 0;
   @include tablet {
-    margin: 1rem 5rem;
     padding: 0;
+    margin: 0 2rem;
   }
   &__header {
     margin-bottom: 2rem;

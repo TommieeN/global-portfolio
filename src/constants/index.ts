@@ -5,7 +5,7 @@ import brainflix from "../assets/projects/brainflix.jpg";
 import flags from "../assets/projects/flags.jpg";
 import inStock from "../assets/projects/instock.jpg";
 import rockPaperScissors from "../assets/projects/rockPaperScissors.jpg";
-import todoApp from "../assets/projects/todo-crud-app.png";
+import todoApp from "../assets/projects/todo-crud-app.jpg";
 
 // Tech Stack Icons
 import git from "../assets/techIcons/git.svg";
@@ -25,12 +25,12 @@ const navBarLinks = [
     title: "Home",
   },
   {
-    anchorTag: "#works",
-    title: "Works",
-  },
-  {
     anchorTag: "#about",
     title: "About",
+  },
+  {
+    anchorTag: "#works",
+    title: "Works",
   },
   {
     anchorTag: "#contact",
