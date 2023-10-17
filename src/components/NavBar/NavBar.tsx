@@ -44,7 +44,7 @@ const NavBar: React.FC = () => {
         <h3 className="nav-bar__logo-text">Tommy<span className="nav-bar__logo-text--blue">.</span></h3>
       </header>
       <div>
-        <motion.ul
+        <motion.div
           variants={container}
           initial="hidden"
           animate="visible"
@@ -53,7 +53,7 @@ const NavBar: React.FC = () => {
         >
           {navBarLinks.map((navText: NavBarLink) => {
             return (
-              <motion.li
+              <motion.div
                 key={navText.title}
                 variants={item}
                 className="nav-bar__anchor-tag"
@@ -65,10 +65,10 @@ const NavBar: React.FC = () => {
                 >
                   {navText.title}
                 </AnchorLink>
-              </motion.li>
+              </motion.div>
             );
           })}
-          <motion.li variants={item} className="nav-bar__link">
+          <motion.div variants={item} className="nav-bar__link">
             <a
               className="nav-bar__anchor-tag"
               target="_blank"
@@ -76,8 +76,8 @@ const NavBar: React.FC = () => {
             >
               Resume
             </a>
-          </motion.li>
-        </motion.ul>
+          </motion.div>
+        </motion.div>
         <button
           className="nav-bar__hamburger"
           onClick={() => {
@@ -95,10 +95,10 @@ const NavBar: React.FC = () => {
           )}
         </button>
         {hamburgerMenuOpen && (
-          <motion.ul
+          <motion.div
             variants={item}
             initial={{ height: 0 }}
-            animate={{ height: 194 }}
+            animate={{ height: 241 }}
             transition={{ duration: 0.2 }}
             exit="exit"
             className="nav-bar__links"
@@ -121,14 +121,21 @@ const NavBar: React.FC = () => {
                     offset="80"
                     href={navText.anchorTag}
                   >
-                    <motion.li variants={item} className="nav-bar__link">
+                    <motion.div variants={item} className="nav-bar__link">
                       {navText.title}
-                    </motion.li>
+                    </motion.div>
                   </AnchorLink>
                 );
               })}
             </motion.div>
-          </motion.ul>
+            <a
+              className="nav-bar__link"
+              target="_blank"
+              href="https://drive.google.com/file/d/1h8pz_otS4TyHLdTXXhW0pr5kiR8AO74S/view?usp=sharing"
+            >
+              Resume
+            </a>
+          </motion.div>
         )}
       </div>
     </nav>
