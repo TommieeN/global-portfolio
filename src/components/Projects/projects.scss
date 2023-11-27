@@ -20,7 +20,9 @@
     }
   }
   &__image {
-    width: 100%;
+    width: 25rem;
+    height: 13rem;
+    // max-height: 14rem;
     box-shadow: 0px 8px 15px rgb(45, 45, 45);
     border-radius: 1rem;
   }

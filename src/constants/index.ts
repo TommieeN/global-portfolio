@@ -5,7 +5,7 @@ import brainflix from "../assets/projects/brainflix.jpg";
 import flags from "../assets/projects/flags.jpg";
 import inStock from "../assets/projects/instock.jpg";
 import rockPaperScissors from "../assets/projects/rockPaperScissors.jpg";
-import todoApp from "../assets/projects/todo-crud-app.jpg";
+import snapdrop from "../assets/projects/snapdrop.jpg"
 
 // Tech Stack Icons
 import git from "../assets/techIcons/git.svg";
@@ -99,6 +99,17 @@ const techIcons = [
 const projects = [
   {
     id: 1,
+    title: "SnapDrop",
+    description:
+      "This web application replicates key features of the popular social media platform Instagram. Users can post images, add captions, and interact with posts.",
+    img: snapdrop,
+    link: "https://github.com/TommieeN/SnapDrop",
+    deploy:
+      "https://snap-drop-alpha.vercel.app/sign-in",
+    techStack: ["React", "TailWindCSS", "AppWrite", "Auth"],
+  },
+  {
+    id: 2,
     title: "Journey",
     description:
       "I crafted a 2D platformer game using React and Canvas. Guide the character to the level's end using arrow keys, while dodging airborne enemies. I independently designed the entire map using Tiled, incorporating freely available assets for characters, enemies, and tilesets.",
@@ -109,7 +120,7 @@ const projects = [
     techStack: ["React", "SASS", "Object Oriented"],
   },
   {
-    id: 2,
+    id: 3,
     title: "Bandsite",
     description:
       "Designed a fully responsive website for a fictional band where users can conveniently purchase event tickets.",
@@ -119,7 +130,7 @@ const projects = [
     techStack: ["React", "TailWind", "Vite", "Node.js"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Brainflix",
     description:
       "Developed a comprehensive full-stack streaming platform that allows users to post comments and upload their own videos, fostering a vibrant and interactive online community.",
@@ -129,7 +140,7 @@ const projects = [
     techStack: ["React", "Express.js", "RestAPI"],
   },
   {
-    id: 4,
+    id: 5,
     title: "In-Stock",
     description: "This collaborative project followed agile methodologies, involving three other web developers from our class. Our mission: design an efficient inventory system for warehouse management. We relied on MySQL for the database and React for the frontend. To coordinate tasks, we used Jira for ticket assignment, and maintained version control with Git.",
     img: inStock,
@@ -137,7 +148,7 @@ const projects = [
     techStack: ["React", "SASS", "Express.js", "mySQL"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Flags",
     description: "Crafted a user-friendly flag directory featuring flags from across the globe. Users can seamlessly search, filter by region, and navigate through an extensive list of flags. Upon selecting a flag, they can access in-depth information about the corresponding country's flag. Additionally, added darkmode since I like dark themes!",
     img: flags,
@@ -146,22 +157,13 @@ const projects = [
     techStack: ["React", "SASS", "Node.js", "Axios"],
   },
   {
-    id: 6,
+    id: 7,
     title: "Game",
     description: "Engaged in a captivating game of rock-paper-scissors, inspired by a frontend mentor challenge. This project involved transforming Figma mockups into a fully functional game, providing an interactive and enjoyable gaming experience.",
     img: rockPaperScissors,
     link: "https://github.com/TommieeN/rock-paper-scissors/tree/main",
     deploy: "https://rock-paper-scissors-tommy.netlify.app/",
     techStack: ["Typescript", "Tailwind", "FramerMotion"],
-  },
-  {
-    id: 7,
-    title: "Auth App",
-    description:
-      "A meticulously crafted to-do application developed with Svelte, seamlessly integrating Firebase for user authentication and secure storage of valuable user data. Enjoy a streamlined and efficient task management experience.",
-    img: todoApp,
-    link: "https://github.com/TommieeN/svelte-todo-crud-app/tree/main/src/routes",
-    techStack: ["Svelte", "CSS", "FireBase", "Auth"],
   },
 ];
 
