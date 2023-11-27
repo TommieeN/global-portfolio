@@ -36,6 +36,11 @@ const navBarLinks = [
     anchorTag: "#contact",
     title: "Contact",
   },
+  {
+    anchorTag: "#resume",
+    title: "Resume",
+    link: "https://drive.google.com/file/d/1h8pz_otS4TyHLdTXXhW0pr5kiR8AO74S/view?usp=sharing"
+  },
 ];
 
 const techIcons = [

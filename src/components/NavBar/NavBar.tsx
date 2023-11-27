@@ -9,6 +9,7 @@ import "./navBar.scss";
 interface NavBarLink {
   title: string;
   anchorTag: string;
+  link?: string;
 }
 
 const NavBar: React.FC = () => {
@@ -41,7 +42,9 @@ const NavBar: React.FC = () => {
   return (
     <nav className="nav-bar">
       <header className="nav-bar__container">
-        <h3 className="nav-bar__logo-text">Tommy<span className="nav-bar__logo-text--blue">.</span></h3>
+        <h3 className="nav-bar__logo-text">
+          Tommy<span className="nav-bar__logo-text--blue">.</span>
+        </h3>
       </header>
       <div>
         <motion.div
@@ -52,7 +55,12 @@ const NavBar: React.FC = () => {
           className="nav-bar__desktop"
         >
           {navBarLinks.map((navText: NavBarLink) => {
-            return (
+            return navText.link ? (
+              <motion.div className="nav-bar__anchor-tag">
+                <a className="nav-bar__link" href={navText.link} target="_blank">{navText.title}</a>
+              </motion.div>
+            ) : (
+               
               <motion.div
                 key={navText.title}
                 variants={item}
@@ -66,17 +74,8 @@ const NavBar: React.FC = () => {
                   {navText.title}
                 </AnchorLink>
               </motion.div>
-            );
+            )
           })}
-          <motion.div variants={item} className="nav-bar__link">
-            <a
-              className="nav-bar__anchor-tag"
-              target="_blank"
-              href="https://drive.google.com/file/d/1h8pz_otS4TyHLdTXXhW0pr5kiR8AO74S/view?usp=sharing"
-            >
-              Resume
-            </a>
-          </motion.div>
         </motion.div>
         <button
           className="nav-bar__hamburger"
@@ -112,7 +111,13 @@ const NavBar: React.FC = () => {
               }}
             >
               {navBarLinks.map((navText: NavBarLink) => {
-                return (
+                return navText.link ? (
+                  <motion.div className="nav-bar__link" variants={item}>
+                    <a className="nav-bar__link--resume" target="_blank" href={navText.link}>
+                      {navText.title}
+                    </a>
+                  </motion.div>
+                ) : (
                   <AnchorLink
                     onClick={() => {
                       setHamburgerMenuOpen(false);
@@ -128,13 +133,6 @@ const NavBar: React.FC = () => {
                 );
               })}
             </motion.div>
-            <a
-              className="nav-bar__link"
-              target="_blank"
-              href="https://drive.google.com/file/d/1h8pz_otS4TyHLdTXXhW0pr5kiR8AO74S/view?usp=sharing"
-            >
-              Resume
-            </a>
           </motion.div>
         )}
       </div>
