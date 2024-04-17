@@ -39,7 +39,7 @@ const navBarLinks = [
   {
     anchorTag: "#resume",
     title: "Resume",
-    link: "https://drive.google.com/file/d/1h8pz_otS4TyHLdTXXhW0pr5kiR8AO74S/view?usp=sharing"
+    link: "https://drive.google.com/file/d/1RkrJvWmK5dXTAPBjqMK6w3y2h5cjC41u/view?usp=sharing"
   },
 ];
 
