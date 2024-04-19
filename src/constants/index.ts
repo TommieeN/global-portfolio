@@ -107,7 +107,7 @@ const projects = [
     link: "",
     deploy:
       "https://nails4lifesurrey.com/",
-    techStack: ["React", "SCSS"],
+    techStack: ["React", "SCSS", "Vite"],
   },
   {
     id: 1,
