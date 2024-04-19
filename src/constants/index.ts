@@ -6,6 +6,7 @@ import flags from "../assets/projects/flags.jpg";
 import inStock from "../assets/projects/instock.jpg";
 import rockPaperScissors from "../assets/projects/rockPaperScissors.jpg";
 import snapdrop from "../assets/projects/snapdrop.jpg"
+import nails4life from "../assets/projects/nails4life.jpg"
 
 // Tech Stack Icons
 import git from "../assets/techIcons/git.svg";
@@ -97,6 +98,17 @@ const techIcons = [
 ];
 
 const projects = [
+  {
+    id: 8,
+    title: "Nails 4 Life",
+    description:
+      "A website I created for my nail salon business that I manage, located in Surrey BC. Users can read about us and learn more about our services while also booking online appointments.",
+    img: nails4life,
+    link: "",
+    deploy:
+      "https://nails4lifesurrey.com/",
+    techStack: ["React", "SCSS"],
+  },
   {
     id: 1,
     title: "SnapDrop",
