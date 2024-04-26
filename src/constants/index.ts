@@ -104,10 +104,10 @@ const projects = [
     description:
       "A website I created for my nail salon business that I manage, located in Surrey BC. Users can read about us and learn more about our services while also booking online appointments.",
     img: nails4life,
-    link: "",
+    link: "https://github.com/TommieeN/Nails-4-Life",
     deploy:
       "https://nails4lifesurrey.com/",
-    techStack: ["React", "SCSS", "Vite"],
+    techStack: ["React", "TypeScript", "SCSS", "Vite"],
   },
   {
     id: 1,
